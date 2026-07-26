@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.calculator{
+    width:380px;
+    background:#111;
+    padding:25px;
+    border-radius:35px;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.55);
+}
+
+.display{
+    background:#000;
+    padding:18px;
+    border-radius:25px;
+    margin-bottom:22px;
+
+    border:3px solid transparent;
+
+    background-image:
+        linear-gradient(#000,#000),
+        linear-gradient(
+            90deg,
+            #ff2d2d,
+            #ff8c00,
+            #ffd500,
+            #21c65a,
+            #1b82ff,
+            #6a3dff,
+            #c93cff
+        );
+
+    background-origin:border-box;
+    background-clip:padding-box,border-box;
+}
+
+.display input{
+    width:100%;
+    height:70px;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:52px;
+    font-weight:500;
+
+    text-align:right;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.btn{
+
+    border:none;
+    outline:none;
+
+    height:82px;
+
+    border-radius:22px;
+
+    color:white;
+
+    font-size:34px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.btn:hover{
+    transform:translateY(-3px);
+    filter:brightness(1.08);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+
+.red{
+    background:#ff3b30;
+}
+
+.orange{
+    background:#ff9500;
+}
+
+.yellow{
+    background:#ffcc00;
+    color:#fff;
+}
+
+.green{
+    background:#28c840;
+}
+
+.blue{
+    background:#0a84ff;
+}
+
+.indigo{
+    background:#4f46e5;
+}
+
+.purple{
+    background:#8e44ff;
+}
+
+.violet{
+    background:#8e44ff;
+}
+
+.zero{
+    grid-column:span 2;
+}
+
+
+@media(max-width:430px){
+
+    .calculator{
+        width:95%;
+        padding:18px;
+    }
+
+    .btn{
+        height:72px;
+        font-size:30px;
+    }
+
+    .display input{
+        font-size:42px;
+        height:60px;
+    }
+
+}
